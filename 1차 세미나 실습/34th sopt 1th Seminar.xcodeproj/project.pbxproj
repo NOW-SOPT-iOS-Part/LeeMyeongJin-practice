@@ -7,29 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71A658F72BC11F6E00583D62 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 71A658F62BC11F6E00583D62 /* Then */; };
+		71A658FA2BC12F4F00583D62 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 71A658F92BC12F4F00583D62 /* SnapKit */; };
+		71A658FC2BC12F4F00583D62 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 71A658FB2BC12F4F00583D62 /* SnapKit-Dynamic */; };
+		71A658FE2BC1324800583D62 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A658FD2BC1324800583D62 /* GridViewController.swift */; };
+		71A659012BC13EAB00583D62 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A659002BC13EAB00583D62 /* ViewFactory.swift */; };
+		71ED40132BBF2AC20099B958 /* FontLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED40122BBF2AC20099B958 /* FontLiterals.swift */; };
+		71ED40182BBF2C4B0099B958 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71ED40152BBF2C4B0099B958 /* Pretendard-Regular.otf */; };
+		71ED40192BBF2C4B0099B958 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71ED40162BBF2C4B0099B958 /* Pretendard-ExtraBold.otf */; };
+		71ED401A2BBF2C4B0099B958 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71ED40172BBF2C4B0099B958 /* Pretendard-SemiBold.otf */; };
 		71F12C512BB8024000459B44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F12C502BB8024000459B44 /* AppDelegate.swift */; };
 		71F12C532BB8024000459B44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F12C522BB8024000459B44 /* SceneDelegate.swift */; };
 		71F12C552BB8024000459B44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F12C542BB8024000459B44 /* ViewController.swift */; };
-		71F12C582BB8024000459B44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71F12C562BB8024000459B44 /* Main.storyboard */; };
 		71F12C5A2BB8024100459B44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71F12C592BB8024100459B44 /* Assets.xcassets */; };
 		71F12C5D2BB8024100459B44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71F12C5B2BB8024100459B44 /* LaunchScreen.storyboard */; };
 		71F12C662BB8E66500459B44 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F12C652BB8E66500459B44 /* LoginViewController.swift */; };
 		71F12C682BB8E68700459B44 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F12C672BB8E68700459B44 /* WelcomeViewController.swift */; };
 		71F12C6A2BB9797400459B44 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F12C692BB9797400459B44 /* UIColor+.swift */; };
+		71F12C6E2BB9846500459B44 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71F12C6D2BB9846400459B44 /* Pretendard-Bold.otf */; };
+		71F12C712BBD580B00459B44 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F12C702BBD580B00459B44 /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71A658FD2BC1324800583D62 /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
+		71A659002BC13EAB00583D62 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
+		71ED40122BBF2AC20099B958 /* FontLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLiterals.swift; sourceTree = "<group>"; };
+		71ED40152BBF2C4B0099B958 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		71ED40162BBF2C4B0099B958 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		71ED40172BBF2C4B0099B958 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		71F12C4D2BB8024000459B44 /* 34th sopt 1th Seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "34th sopt 1th Seminar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F12C502BB8024000459B44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71F12C522BB8024000459B44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		71F12C542BB8024000459B44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		71F12C572BB8024000459B44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		71F12C592BB8024100459B44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71F12C5C2BB8024100459B44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71F12C5E2BB8024100459B44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71F12C652BB8E66500459B44 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		71F12C672BB8E68700459B44 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		71F12C692BB9797400459B44 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		71F12C6D2BB9846400459B44 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		71F12C702BBD580B00459B44 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,12 +54,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71A658F72BC11F6E00583D62 /* Then in Frameworks */,
+				71A658FA2BC12F4F00583D62 /* SnapKit in Frameworks */,
+				71A658FC2BC12F4F00583D62 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71A658FF2BC13E8B00583D62 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				71A659002BC13EAB00583D62 /* ViewFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		71ED40112BBF2AA30099B958 /* Literals */ = {
+			isa = PBXGroup;
+			children = (
+				71ED40122BBF2AC20099B958 /* FontLiterals.swift */,
+			);
+			path = Literals;
+			sourceTree = "<group>";
+		};
+		71ED40142BBF2AD90099B958 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				71ED40162BBF2C4B0099B958 /* Pretendard-ExtraBold.otf */,
+				71F12C6D2BB9846400459B44 /* Pretendard-Bold.otf */,
+				71ED40152BBF2C4B0099B958 /* Pretendard-Regular.otf */,
+				71ED40172BBF2C4B0099B958 /* Pretendard-SemiBold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		71F12C442BB8024000459B44 = {
 			isa = PBXGroup;
 			children = (
@@ -62,11 +109,13 @@
 		71F12C4F2BB8024000459B44 /* 34th sopt 1th Seminar */ = {
 			isa = PBXGroup;
 			children = (
+				71A658FF2BC13E8B00583D62 /* Factory */,
 				71F12C6B2BB9799200459B44 /* App */,
 				71F12C6C2BB97A4200459B44 /* Presentation */,
-				71F12C592BB8024100459B44 /* Assets.xcassets */,
+				71F12C6F2BBD56FF00459B44 /* Resource */,
+				71F12C722BBD580F00459B44 /* Extension */,
+				71ED40112BBF2AA30099B958 /* Literals */,
 				71F12C5E2BB8024100459B44 /* Info.plist */,
-				71F12C692BB9797400459B44 /* UIColor+.swift */,
 			);
 			path = "34th sopt 1th Seminar";
 			sourceTree = "<group>";
@@ -77,7 +126,6 @@
 				71F12C502BB8024000459B44 /* AppDelegate.swift */,
 				71F12C522BB8024000459B44 /* SceneDelegate.swift */,
 				71F12C542BB8024000459B44 /* ViewController.swift */,
-				71F12C562BB8024000459B44 /* Main.storyboard */,
 				71F12C5B2BB8024100459B44 /* LaunchScreen.storyboard */,
 			);
 			path = App;
@@ -88,8 +136,27 @@
 			children = (
 				71F12C652BB8E66500459B44 /* LoginViewController.swift */,
 				71F12C672BB8E68700459B44 /* WelcomeViewController.swift */,
+				71A658FD2BC1324800583D62 /* GridViewController.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		71F12C6F2BBD56FF00459B44 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				71ED40142BBF2AD90099B958 /* Fonts */,
+				71F12C592BB8024100459B44 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		71F12C722BBD580F00459B44 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				71F12C692BB9797400459B44 /* UIColor+.swift */,
+				71F12C702BBD580B00459B44 /* UIView+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +175,11 @@
 			dependencies = (
 			);
 			name = "34th sopt 1th Seminar";
+			packageProductDependencies = (
+				71A658F62BC11F6E00583D62 /* Then */,
+				71A658F92BC12F4F00583D62 /* SnapKit */,
+				71A658FB2BC12F4F00583D62 /* SnapKit-Dynamic */,
+			);
 			productName = "34th sopt 1th Seminar";
 			productReference = 71F12C4D2BB8024000459B44 /* 34th sopt 1th Seminar.app */;
 			productType = "com.apple.product-type.application";
@@ -136,6 +208,10 @@
 				Base,
 			);
 			mainGroup = 71F12C442BB8024000459B44;
+			packageReferences = (
+				71A658F52BC11F6E00583D62 /* XCRemoteSwiftPackageReference "Then" */,
+				71A658F82BC12F4F00583D62 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 71F12C4E2BB8024000459B44 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -151,8 +227,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				71F12C5D2BB8024100459B44 /* LaunchScreen.storyboard in Resources */,
+				71ED40182BBF2C4B0099B958 /* Pretendard-Regular.otf in Resources */,
+				71ED40192BBF2C4B0099B958 /* Pretendard-ExtraBold.otf in Resources */,
+				71ED401A2BBF2C4B0099B958 /* Pretendard-SemiBold.otf in Resources */,
+				71F12C6E2BB9846500459B44 /* Pretendard-Bold.otf in Resources */,
 				71F12C5A2BB8024100459B44 /* Assets.xcassets in Resources */,
-				71F12C582BB8024000459B44 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,24 +244,20 @@
 			files = (
 				71F12C662BB8E66500459B44 /* LoginViewController.swift in Sources */,
 				71F12C682BB8E68700459B44 /* WelcomeViewController.swift in Sources */,
+				71F12C712BBD580B00459B44 /* UIView+.swift in Sources */,
 				71F12C552BB8024000459B44 /* ViewController.swift in Sources */,
+				71ED40132BBF2AC20099B958 /* FontLiterals.swift in Sources */,
 				71F12C512BB8024000459B44 /* AppDelegate.swift in Sources */,
 				71F12C532BB8024000459B44 /* SceneDelegate.swift in Sources */,
+				71A659012BC13EAB00583D62 /* ViewFactory.swift in Sources */,
 				71F12C6A2BB9797400459B44 /* UIColor+.swift in Sources */,
+				71A658FE2BC1324800583D62 /* GridViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		71F12C562BB8024000459B44 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				71F12C572BB8024000459B44 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		71F12C5B2BB8024100459B44 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -325,7 +400,6 @@
 				INFOPLIST_FILE = "34th sopt 1th Seminar/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -353,7 +427,6 @@
 				INFOPLIST_FILE = "34th sopt 1th Seminar/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -391,6 +464,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		71A658F52BC11F6E00583D62 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		71A658F82BC12F4F00583D62 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		71A658F62BC11F6E00583D62 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71A658F52BC11F6E00583D62 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		71A658F92BC12F4F00583D62 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71A658F82BC12F4F00583D62 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		71A658FB2BC12F4F00583D62 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71A658F82BC12F4F00583D62 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71F12C452BB8024000459B44 /* Project object */;
 }

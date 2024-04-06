@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol DataBindProtocol: AnyObject {
+    func dataBind(id: String)
+}
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {

@@ -7,23 +7,36 @@
 
 import UIKit
 
+import Then
+import SnapKit
+
 final class LoginViewController: UIViewController {
     
     // MARK: - UIComponents
     
     private let titleLabel: UILabel = {
-        let label = UILabel(frame: CGRect(x: 69, y: 161, width: 236, height: 44))
+        let label = UILabel()
         label.text = "동네라서 가능한 모든것\n당근에서 가까운 이웃과 함께해요."
         label.textColor = .black
         label.textAlignment = .center
+        label.font = .subhead01
         label.numberOfLines = 2
         return label
     }()
+    
+    private let titlesLabel = UILabel().then {
+        $0.text = "동네라서 가능한 모든것\n당근에서 가까운 이웃과 함께해요."
+        $0.textColor = .black
+        $0.textAlignment = .center
+        $0.font = .subhead01
+        $0.numberOfLines = 2
+    }
     
     private let idTextField: UITextField = {
         let textField = UITextField(frame: CGRect(x: 20, y: 276, width: 335, height: 52))
         textField.placeholder = " 아이디"
         textField.layer.cornerRadius = 3
+        textField.font = .subhead04
         textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
         return textField
     }()
@@ -32,6 +45,7 @@ final class LoginViewController: UIViewController {
         let textField = UITextField(frame: CGRect(x: 20, y: 335, width: 335, height: 52))
         textField.placeholder = " 비밀번호"
         textField.layer.cornerRadius = 3
+        textField.font = .subhead04
         textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
         return textField
     }()
@@ -41,7 +55,9 @@ final class LoginViewController: UIViewController {
         button.backgroundColor = .daangunOrange
         button.setTitle("로그인하기", for: .normal)
         button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = .subhead01
         button.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
+        button.layer.cornerRadius = 3
         return button
     }()
     
@@ -52,6 +68,7 @@ final class LoginViewController: UIViewController {
         
         setUI()
         setHierarchy()
+        setLayout()
     }
     
     
@@ -62,15 +79,67 @@ final class LoginViewController: UIViewController {
     }
     
     private func setHierarchy() {
-        [titleLabel, idTextField, passwordTextField, loginButton].forEach {
-            self.view.addSubview($0)
+        
+        [titleLabel, idTextField, passwordTextField, loginButton].forEach { [weak self] view in
+            guard let self else { return }
+//            view.translatesAutoresizingMaskIntoConstraints = false
+            self.view.addSubview(view)
         }
     }
+    
+//    private func setLayout() {
+//        NSLayoutConstraint.activate([titleLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 161),
+//                                     titleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 69),
+//                                     titleLabel.widthAnchor.constraint(equalToConstant: 236),
+//                                     titleLabel.heightAnchor.constraint(equalToConstant: 44)])
+//        
+//        NSLayoutConstraint.activate([idTextField.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 276),
+//                                     idTextField.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+//                                     idTextField.widthAnchor.constraint(equalToConstant: 335),
+//                                     idTextField.heightAnchor.constraint(equalToConstant: 52)])
+//        
+//        NSLayoutConstraint.activate([passwordTextField.topAnchor.constraint(equalTo: idTextField.bottomAnchor, constant: 7),
+//                                     passwordTextField.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+//                                     passwordTextField.widthAnchor.constraint(equalToConstant: 335),
+//                                     passwordTextField.heightAnchor.constraint(equalToConstant: 52)])
+//        
+//        NSLayoutConstraint.activate([loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 35),
+//                                     loginButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+//                                     loginButton.widthAnchor.constraint(equalToConstant: 335),
+//                                     loginButton.heightAnchor.constraint(equalToConstant: 52)])
+//    }
+    
+    private func setLayout() {
+        titleLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(161)
+            $0.leading.trailing.equalToSuperview().inset(69)
+        }
+        
+        idTextField.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(276)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(52)
+        }
+        
+        passwordTextField.snp.makeConstraints {
+            $0.top.equalTo(idTextField.snp.bottom).offset(7)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(52)
+        }
+        
+        loginButton.snp.makeConstraints {
+            $0.top.equalTo(passwordTextField.snp.bottom).offset(35)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(58)
+        }
+    }
+    
+    // MARK: - Methods
     
     @objc
     private func loginButtonDidTap() {
         presentToWelcomeVC()
-//        pushToWelcomeVC()
+        //        pushToWelcomeVC()
     }
     
     private func presentToWelcomeVC() {

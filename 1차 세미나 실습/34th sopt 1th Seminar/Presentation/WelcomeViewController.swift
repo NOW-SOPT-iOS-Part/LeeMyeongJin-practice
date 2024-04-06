@@ -19,6 +19,7 @@ final class WelcomeViewController: UIViewController {
         let label = UILabel(frame: CGRect(x: 140, y: 295, width: 95, height: 60))
         label.text = "???님\n반가워요!"
         label.numberOfLines = 2
+        label.font = .head01
         return label
     }()
     
@@ -27,6 +28,8 @@ final class WelcomeViewController: UIViewController {
         button.setTitle("메인으로", for: .normal)
         button.backgroundColor = .daangunOrange
         button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = .subhead01
+        button.layer.cornerRadius = 3
         return button
     }()
     
@@ -35,7 +38,9 @@ final class WelcomeViewController: UIViewController {
         button.setTitle("다시 로그인", for: .normal)
         button.setTitleColor(.gray, for: .normal)
         button.backgroundColor = .daangunGray
+        button.titleLabel?.font = .subhead01
         button.addTarget(self, action: #selector(backToLoginButtonDidTap), for: .touchUpInside)
+        button.layer.cornerRadius = 3
         return button
     }()
     
@@ -49,10 +54,11 @@ final class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setUI()
         setHierarchy()
-        bindID()
-    }    
+        bind()
+    }
     
     // MARK: - UI & Layout
     
@@ -61,9 +67,12 @@ final class WelcomeViewController: UIViewController {
     }
     
     private func setHierarchy() {
-        [daangniImageView, welcomeLabel, mainButton, backButton].forEach {
-            self.view.addSubview($0)
-        }
+        self.view.addSubviews(
+            daangniImageView,
+            welcomeLabel,
+            mainButton,
+            backButton
+        )
     }
     
     @objc
@@ -75,12 +84,14 @@ final class WelcomeViewController: UIViewController {
         }
     }
     
-    private func bindID() {
+    // MARK: - Methods
+    
+    private func bind() {
         
         if let id = id, id.count > 0 {
             self.welcomeLabel.text = "\(id)님 \n반가워요"
         } else {
-            self.welcomeLabel.text = "사용자 입력 부탁 !"
+            self.welcomeLabel.text = "사용자 입력X"
         }
     }
     
