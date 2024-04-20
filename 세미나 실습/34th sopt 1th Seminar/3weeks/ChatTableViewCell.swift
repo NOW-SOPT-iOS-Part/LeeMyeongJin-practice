@@ -23,7 +23,7 @@ class ChatTableViewCell: UITableViewCell {
     }
     
     private let placeLabel = UILabel().then {
-        $0.textColor = UIColor(red: 156, green: 156, blue: 156, alpha: 1)
+        $0.textColor = .gray
         $0.textAlignment = .left
         $0.font = UIFont(name: "Pretendard-Bold", size: 12)
     }
@@ -34,7 +34,7 @@ class ChatTableViewCell: UITableViewCell {
         $0.font = UIFont(name: "Pretendard-Bold", size: 14)
     }
     
-    private let productImageView = UIImageView()
+    private let itemImageView = UIImageView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -52,7 +52,8 @@ class ChatTableViewCell: UITableViewCell {
             profileImageView,
             nameLabel,
             placeLabel,
-            chatLabel
+            chatLabel,
+            itemImageView
         )
         
         profileImageView.snp.makeConstraints {
@@ -71,7 +72,25 @@ class ChatTableViewCell: UITableViewCell {
         }
         
         chatLabel.snp.makeConstraints {
+            $0.top.equalTo(nameLabel.snp.bottom).offset(4)
+            $0.leading.equalTo(profileImageView.snp.trailing).offset(16)
+            
+        }
+        
+        itemImageView.snp.makeConstraints {
             $0.top.trailing.equalToSuperview().inset(16)
         }
+        
+    }
+}
+
+
+extension ChatTableViewCell {
+    func dataBind(_ chatData: ChatModel) {
+        profileImageView.image = chatData.profileImg
+        nameLabel.text = chatData.name
+        placeLabel.text = chatData.place
+        chatLabel.text = chatData.message
+        itemImageView.image = chatData.itemImg
     }
 }

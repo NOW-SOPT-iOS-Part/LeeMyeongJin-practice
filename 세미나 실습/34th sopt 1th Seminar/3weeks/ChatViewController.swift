@@ -11,9 +11,16 @@ import UIKit
 
 final class ChatViewController: UIViewController {
     
+    private let chatList = ChatModel.dummy()
+    
     // MARK: - UIComponents
     
+    private let chatView = ChatView()
     // MARK: - Life Cycles
+    
+    override func loadView() {
+        self.view = chatView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,11 +48,33 @@ final class ChatViewController: UIViewController {
     }
     
     private func setDelegate() {
-        
+        chatView.ChatTableView.delegate = self
+        chatView.ChatTableView.dataSource = self
     }
     
     private func setRegister() {
-        
+        chatView.ChatTableView.register(ChatTableViewCell.self, forCellReuseIdentifier: ChatTableViewCell.className)
     }
     
+}
+
+extension ChatViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 72
+    }
+}
+
+
+extension ChatViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return chatList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = chatView.ChatTableView.dequeueReusableCell(withIdentifier: ChatTableViewCell.className, for: indexPath)
+                as? ChatTableViewCell else { return UITableViewCell() }
+
+        cell.dataBind(chatList[indexPath.row])
+        return cell
+    }
 }
