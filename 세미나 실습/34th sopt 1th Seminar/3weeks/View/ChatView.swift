@@ -66,7 +66,10 @@ final class ChatView: UIView {
     }
     
     private func setHierarchy() {
-        addSubviews(HStackView, ChatTableView)
+        addSubviews(
+            HStackView,
+            ChatTableView
+        )
     }
     
     private func setLayout() {
