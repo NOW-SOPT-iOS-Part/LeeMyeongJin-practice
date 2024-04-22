@@ -16,17 +16,17 @@ struct ItemModel {
 extension ItemModel {
     static func dummy() -> [ItemModel] {
         return [
-            ItemModel(productImage: .profile1 ,name: "아이폰 13 프로맥스", price: "1,000,000 원"),
-            ItemModel(productImage: .profile1,name: "커피 머신", price: "25,000 원"),
-            ItemModel(productImage: .profile1,name: "아이폰 13 프로맥스", price: "1,000,000 원"),
-            ItemModel(productImage: .profile1,name: "아이폰 13 프로맥스", price: "1,000,000 원"),
-            ItemModel(productImage: .profile1,name: "아이폰 13 프로맥스", price: "1,000,000 원"),
-            ItemModel(productImage: .profile1,name: "커피 머신", price: "1,000,000 원"),
-            ItemModel(productImage: .profile1,name: "아이폰 13 프로맥스", price: "1,000,000 원"),
-            ItemModel(productImage: .profile1,name: "아이폰 13 프로맥스", price: "1,000,000 원"),
-            ItemModel(productImage: .profile1,name: "아이폰 13 프로맥스", price: "1,000,000 원"),
-            ItemModel(productImage: .profile1,name: "아이폰 13 프로맥스", price: "1,000,000 원"),
-            ItemModel(productImage: .profile1,name: "아이폰 13 프로맥스", price: "1,000,000 원")
+            ItemModel(productImage: .product1 ,name: "아이폰 13 프로맥스", price: "1,000,000 원"),
+            ItemModel(productImage: .product2,name: "커피 머신", price: "25,000 원"),
+            ItemModel(productImage: .product3,name: "에소프레소 더블샷", price: "1,000,000 원"),
+            ItemModel(productImage: .product4,name: "명진이의 사랑", price: "1,000,000 원"),
+            ItemModel(productImage: .product5,name: "아이폰 13 프로맥스", price: "1,000,000 원"),
+            ItemModel(productImage: .product6,name: "커피 머신", price: "1,000,000 원"),
+            ItemModel(productImage: .product7,name: "아이폰 13 프로맥스", price: "1,000,000 원"),
+            ItemModel(productImage: .product9,name: "아이폰 13 프로맥스", price: "1,000,000 원"),
+            ItemModel(productImage: .product8,name: "아이폰 13 프로맥스", price: "1,000,000 원"),
+            ItemModel(productImage: .product1,name: "아이폰 13 프로맥스", price: "1,000,000 원"),
+            ItemModel(productImage: .product2,name: "아이폰 13 프로맥스", price: "1,000,000 원")
         ]
     }
 }

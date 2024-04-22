@@ -13,7 +13,7 @@ import Then
 class ItemCollectionViewCell: UICollectionViewCell {
     
     private let productImage = UIImageView().then {
-        $0.image = UIImage(resource: .product7)
+        $0.image = UIImage(resource: .profile2)
     }
     
     private let productTitle = UILabel().then {
