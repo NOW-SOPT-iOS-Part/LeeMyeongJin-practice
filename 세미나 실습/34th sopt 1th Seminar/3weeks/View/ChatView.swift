@@ -43,7 +43,7 @@ final class ChatView: UIView {
         $0.alignment = .leading
     }
     
-    let ChatTableView = UITableView(frame: .zero, style: .plain)
+    let chatTableView = UITableView(frame: .zero, style: .plain)
     
     // MARK: - Life Cycles
     
@@ -68,7 +68,7 @@ final class ChatView: UIView {
     private func setHierarchy() {
         addSubviews(
             HStackView,
-            ChatTableView
+            chatTableView
         )
     }
     
@@ -79,7 +79,7 @@ final class ChatView: UIView {
             $0.height.equalTo(48)
         }
         
-        ChatTableView.snp.makeConstraints {
+        chatTableView.snp.makeConstraints {
             $0.top.equalTo(HStackView.snp.bottom)
             $0.leading.trailing.equalTo(safeAreaLayoutGuide).inset(20)
             $0.bottom.equalTo(safeAreaLayoutGuide)
