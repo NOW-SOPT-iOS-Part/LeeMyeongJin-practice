@@ -48,12 +48,12 @@ final class ChatViewController: UIViewController {
     }
     
     private func setDelegate() {
-        chatView.ChatTableView.delegate = self
-        chatView.ChatTableView.dataSource = self
+        chatView.chatTableView.delegate = self
+        chatView.chatTableView.dataSource = self
     }
     
     private func setRegister() {
-        chatView.ChatTableView.register(ChatTableViewCell.self, forCellReuseIdentifier: ChatTableViewCell.className)
+        chatView.chatTableView.register(ChatTableViewCell.self, forCellReuseIdentifier: ChatTableViewCell.className)
     }
     
 }
@@ -71,7 +71,7 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = chatView.ChatTableView.dequeueReusableCell(withIdentifier: ChatTableViewCell.className, for: indexPath)
+        guard let cell = chatView.chatTableView.dequeueReusableCell(withIdentifier: ChatTableViewCell.className, for: indexPath)
                 as? ChatTableViewCell else { return UITableViewCell() }
 
         cell.dataBind(chatList[indexPath.row])

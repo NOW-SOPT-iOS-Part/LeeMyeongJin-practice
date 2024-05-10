@@ -1,0 +1,13 @@
+//
+//  UIColor+.swift
+//  practiceAfter4weeks
+//
+//  Created by 이명진 on 4/27/24.
+//
+
+import UIKit
+
+extension UIColor {
+    static let daangunOrange = UIColor(red: 255/255, green: 111/255, blue: 15/255, alpha: 1)
+    static let daangunGray = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
+}
