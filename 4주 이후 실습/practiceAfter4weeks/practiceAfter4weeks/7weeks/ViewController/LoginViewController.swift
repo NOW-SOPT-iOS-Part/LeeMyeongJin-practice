@@ -22,6 +22,11 @@ import RxCocoa
 
 final class LoginViewController: UIViewController {
     
+    
+    private let loginViewModel = LoginViewModel()
+    
+    private let disposeBag = DisposeBag()
+    
     // MARK: - UIComponents
     
     private let titleLabel: UILabel = {
@@ -78,6 +83,7 @@ final class LoginViewController: UIViewController {
         setUI()
         setHierarchy()
         setLayout()
+        bindViewModel()
     }
     
     
@@ -120,8 +126,6 @@ final class LoginViewController: UIViewController {
             $0.height.equalTo(58)
         }
     }
-
-    }
     
     // MARK: - Methods
     
@@ -141,5 +145,22 @@ final class LoginViewController: UIViewController {
     private func pushToWelcomeVC() {
         let welcomeViewController = WelcomeViewController()
         self.navigationController?.pushViewController(welcomeViewController, animated: true)
+    }
+    
+    private func bindViewModel() {
+        let input = LoginViewModel.Input(
+            idTextInput: idTextField.rx.text.orEmpty.asObservable(),
+            passwordTextInput: passwordTextField.rx.text.orEmpty.asObservable()
+        )
+        
+        let output = self.loginViewModel.transform(from: input, disposeBag: self.disposeBag)
+        
+        
+        output.isValid
+            .subscribe(with: self, onNext: { owner, isvalid in
+                owner.loginButton.backgroundColor = isvalid ? .daangunOrange : .daangunGray
+            })
+            .disposed(by: disposeBag)
+        
     }
 }
