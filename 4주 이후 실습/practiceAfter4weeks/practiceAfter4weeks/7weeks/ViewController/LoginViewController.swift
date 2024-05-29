@@ -18,7 +18,7 @@ import RxCocoa
 /// ViewController에서 뷰이동 로직을 담당하고, 뷰를 그리는 로직도 있습니다.
 /// 단일 책임원칙을 위배 하였습니다.
 /// 글씨와 같은 상수는 따로 빼줘야 OCP 원칙을 지킨다고도 생각했습니다.
-/// DIP를 적용하지 못했기 때문에 
+/// DIP를 적용하지 못했기 때문에
 
 final class LoginViewController: UIViewController {
     
@@ -95,11 +95,12 @@ final class LoginViewController: UIViewController {
     
     private func setHierarchy() {
         
-        [titleLabel, idTextField, passwordTextField, loginButton].forEach { [weak self] view in
-            guard let self else { return }
-//            view.translatesAutoresizingMaskIntoConstraints = false
-            self.view.addSubview(view)
-        }
+        view.addSubviews(
+            titleLabel,
+            idTextField,
+            passwordTextField,
+            loginButton
+        )
     }
     
     private func setLayout() {
