@@ -66,7 +66,6 @@ final class LoginViewController: UIViewController {
         button.setTitle("로그인하기", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .subhead01
-        button.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
         button.layer.cornerRadius = 3
         return button
     }()
@@ -97,28 +96,6 @@ final class LoginViewController: UIViewController {
         }
     }
     
-//    private func setLayout() {
-//        NSLayoutConstraint.activate([titleLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 161),
-//                                     titleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 69),
-//                                     titleLabel.widthAnchor.constraint(equalToConstant: 236),
-//                                     titleLabel.heightAnchor.constraint(equalToConstant: 44)])
-//
-//        NSLayoutConstraint.activate([idTextField.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 276),
-//                                     idTextField.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
-//                                     idTextField.widthAnchor.constraint(equalToConstant: 335),
-//                                     idTextField.heightAnchor.constraint(equalToConstant: 52)])
-//
-//        NSLayoutConstraint.activate([passwordTextField.topAnchor.constraint(equalTo: idTextField.bottomAnchor, constant: 7),
-//                                     passwordTextField.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
-//                                     passwordTextField.widthAnchor.constraint(equalToConstant: 335),
-//                                     passwordTextField.heightAnchor.constraint(equalToConstant: 52)])
-//
-//        NSLayoutConstraint.activate([loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 35),
-//                                     loginButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
-//                                     loginButton.widthAnchor.constraint(equalToConstant: 335),
-//                                     loginButton.heightAnchor.constraint(equalToConstant: 52)])
-//    }
-    
     private func setLayout() {
         titleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(161)
@@ -143,18 +120,6 @@ final class LoginViewController: UIViewController {
             $0.height.equalTo(58)
         }
     }
-    
-    private func bind() {
-        loginButton.rx.tap
-            .subscribe { <#Void#> in
-                <#code#>
-            } onError: { <#Error#> in
-                <#code#>
-            } onCompleted: {
-                <#code#>
-            } onDisposed: {
-                <#code#>
-            }
 
     }
     
